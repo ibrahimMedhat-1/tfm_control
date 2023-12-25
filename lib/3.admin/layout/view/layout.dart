@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tfm_control/3.admin/layout/view/row_list_model.dart';
 
 import '../../../utils/styles/colors.dart';
+import '../../Students/view/students_view.dart';
 
 class AdminLayout extends StatefulWidget {
   const AdminLayout({Key? key}) : super(key: key);
@@ -12,7 +13,7 @@ class AdminLayout extends StatefulWidget {
 
 class _AdminLayoutState extends State<AdminLayout> {
 
-  Widget _selectedWidget = Container();
+  Widget _selectedWidget = StudentsView();
 
   @override
   Widget build(BuildContext context) {
