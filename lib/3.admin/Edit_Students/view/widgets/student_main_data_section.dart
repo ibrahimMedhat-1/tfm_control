@@ -1,18 +1,32 @@
 import 'package:flutter/material.dart';
-import 'package:tfm_control/utils/styles/colors.dart';
 
-import '../../manager/students_cubit.dart';
-import 'custom_textfield.dart';
+import '../../../../utils/styles/colors.dart';
+import '../../../Students/view/widgets/custom_textfield.dart';
+import '../../manager/edit_student_cubit.dart';
 
-class PersonalDataRow extends StatelessWidget {
-  final StudentsCubit cubit;
-
-  const PersonalDataRow({Key? key, required this.cubit}) : super(key: key);
+class MainDataSection extends StatelessWidget {
+  const MainDataSection({super.key, required this.cubit});
+  final EditStudentCubit cubit;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
+        Row(
+          children: [
+            MyTextField(
+                labeltext: "Student Name",
+              controller: cubit.editNameController,
+            ),
+            SizedBox(width: 10,),
+            MyTextField(labeltext: "Student ID",controller: cubit.editIDController,),
+            SizedBox(width: 10,),
+            MyTextField(labeltext: "Student Email",controller: cubit.editEmailController,),
+            SizedBox(width: 10,),
+            MyTextField(labeltext: "Password",controller: cubit.editPasswordController,),
+          ],
+        ),
+        const SizedBox(height: 20,),
         Row(
           children: [
             Flexible(
@@ -150,12 +164,14 @@ class PersonalDataRow extends StatelessWidget {
             const SizedBox(width: 10,),
             MyTextField(
               labeltext: 'Birth place',
-              controller: cubit.birthPlaceController,
+              controller: cubit.editBirthPlaceController,
+
             ),
             const SizedBox(width: 10,),
             MyTextField(
               labeltext: 'National ID',
-              controller: cubit.nationalIDController,
+              controller: cubit.editNationalIdController,
+
             ),
 
           ],
