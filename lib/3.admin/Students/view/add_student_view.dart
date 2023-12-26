@@ -49,8 +49,6 @@ class AddStudentPage extends StatelessWidget {
                   const SizedBox(height: 20),
                   const SubmitButton(),
                 ],
-
-
               ),
             ),
           );

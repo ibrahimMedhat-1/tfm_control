@@ -11,32 +11,24 @@ class ContactInfoRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(
-          child: MyTextField(
-            labeltext: 'city',
-            controller: cubit.studentCityController,
-          ),
+        MyTextField(
+          labeltext: 'city',
+          controller: cubit.studentCityController,
         ),
         const SizedBox(width: 10),
-        Expanded(
-          child: MyTextField(
-            labeltext: 'email',
-            controller: cubit.studentEmailController,
-          ),
+        MyTextField(
+          labeltext: 'email',
+          controller: cubit.studentEmailController,
         ),
         const SizedBox(width: 10),
-        Expanded(
-          child: MyTextField(
-            labeltext: 'phone No.',
-            controller: cubit.studentPhoneController,
-          ),
+        MyTextField(
+          labeltext: 'phone No.',
+          controller: cubit.studentPhoneController,
         ),
         const SizedBox(width: 10),
-        Expanded(
-          child: MyTextField(
-            labeltext: 'address',
-            controller: cubit.studentAddressController,
-          ),
+        MyTextField(
+          labeltext: 'address',
+          controller: cubit.studentAddressController,
         ),
       ],
     );
