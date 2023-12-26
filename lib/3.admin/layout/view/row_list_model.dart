@@ -17,7 +17,7 @@ class RowListModel {
   });
   static List<RowListModel> rowList = [
     RowListModel(
-      widgetBuilder: () => const StudentsView(),
+      widgetBuilder: () =>   StudentsView(),
       icon: Icons.person,
         title: "Students",
         onTap: (context){}
@@ -32,25 +32,25 @@ class RowListModel {
 
        ),
     RowListModel(
-      widgetBuilder: () => const StudentsView(),
+      widgetBuilder: () =>   StudentsView(),
       icon: Icons.computer,
       title: "Majors",
       onTap: (context) {},
     ),
     RowListModel(
-      widgetBuilder: () => const StudentsView(),
+      widgetBuilder: () =>   StudentsView(),
       icon: Icons.analytics,
       title: "Dashboard",
       onTap: (context) {},
     ),
     RowListModel(
-      widgetBuilder: () => const StudentsView(),
+      widgetBuilder: () =>   StudentsView(),
       icon: Icons.my_library_books_outlined,
       title: "Exams",
       onTap: (context) {},
     ),
     RowListModel(
-      widgetBuilder: () => const StudentsView(),
+      widgetBuilder: () =>   StudentsView(),
       icon: Icons.settings,
       title: "Settings",
       onTap: (context) {},

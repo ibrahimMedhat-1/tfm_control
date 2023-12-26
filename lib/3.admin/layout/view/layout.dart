@@ -13,7 +13,7 @@ class AdminLayout extends StatefulWidget {
 
 class _AdminLayoutState extends State<AdminLayout> {
 
-  Widget _selectedWidget = StudentsView();
+  Widget selectedWidget =  const StudentsView();
 
   @override
   Widget build(BuildContext context) {
@@ -25,10 +25,8 @@ class _AdminLayoutState extends State<AdminLayout> {
             flex: 2,
             child:  Column(
               children: [
-                Container(
-                  child: Image.asset('assets/images/logo.png'),
-                ),
-                Divider(),
+                Image.asset('assets/images/logo.png'),
+                const Divider(),
                 Expanded(
                   child: ListView.builder(
                     itemCount: RowListModel.rowList.length,
@@ -41,12 +39,12 @@ class _AdminLayoutState extends State<AdminLayout> {
                         ),
                         title: Text(
                           item.title,
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: ColorsAsset.kPrimary,
                           ),
                         ),
                         onTap: (){
-                          _updateSelectedWidget(RowListModel.rowList[index].widgetBuilder());
+                          updateSelectedWidget(RowListModel.rowList[index].widgetBuilder());
                         },
                       );
                     },
@@ -55,19 +53,19 @@ class _AdminLayoutState extends State<AdminLayout> {
               ],
             ),
           ),
-          VerticalDivider(),
+          const VerticalDivider(),
           Expanded(
             flex: 7,
-            child: _selectedWidget,
+            child: selectedWidget,
           ),
         ],
       ),
     );
   }
 
-  void _updateSelectedWidget(Widget newWidget) {
+  void updateSelectedWidget(Widget newWidget) {
     setState(() {
-      _selectedWidget = newWidget;
+      selectedWidget = newWidget;
     });
   }
 }
