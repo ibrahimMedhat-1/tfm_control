@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:tfm_control/3.admin/layout/view/widgets/dashboard.dart';
 import 'package:tfm_control/3.admin/Students/view/students_view.dart';
 
+import '../../majors/view/majors_view.dart';
+
 class RowListModel {
   final String title;
   final IconData icon;
@@ -32,7 +34,7 @@ class RowListModel {
 
        ),
     RowListModel(
-      widgetBuilder: () =>   StudentsView(),
+      widgetBuilder: () =>   MajorsView(),
       icon: Icons.computer,
       title: "Majors",
       onTap: (context) {},
