@@ -6,7 +6,7 @@ import 'actions_buttons.dart';
 class StudentsDataTable extends StatelessWidget {
   final StudentsCubit cubit;
 
-  StudentsDataTable({Key? key, required this.cubit}) : super(key: key);
+  const StudentsDataTable({Key? key, required this.cubit}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

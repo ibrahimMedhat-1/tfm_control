@@ -22,9 +22,9 @@ class EditStudentView extends StatelessWidget {
           return Scaffold(
             appBar: AppBar(
               backgroundColor: ColorsAsset.kPrimary,
-              title: Text(
+              title: const Text(
                 "Edit Student", style: TextStyle(color: Colors.white),),
-              iconTheme: IconThemeData(color: Colors.white),
+              iconTheme: const IconThemeData(color: Colors.white),
             ),
             body: Padding(
               padding: const EdgeInsets.symmetric(
@@ -34,22 +34,22 @@ class EditStudentView extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(height: 20,),
-                    Text("Student Main Data", style: TextStyle(
+                    const SizedBox(height: 20,),
+                    const Text("Student Main Data", style: TextStyle(
                         color: ColorsAsset.kPrimary,
                         fontWeight: FontWeight.bold,
                         fontSize: 26),),
-                    SizedBox(height: 20,),
+                    const SizedBox(height: 20,),
                     MainDataSection(cubit: cubit),
-                    SizedBox(height: 20,),
-                    Text("Contact Information", style: TextStyle(
+                    const SizedBox(height: 20,),
+                    const Text("Contact Information", style: TextStyle(
                         color: ColorsAsset.kPrimary,
                         fontWeight: FontWeight.bold,
                         fontSize: 26),),
-                    SizedBox(height: 10,),
+                    const SizedBox(height: 10,),
                     EditContactInfoRow(cubit: cubit),
-                    SizedBox(height: 30,),
-                    SaveButton()
+                    const SizedBox(height: 30,),
+                    const SaveButton()
 
                 ]
                 ),

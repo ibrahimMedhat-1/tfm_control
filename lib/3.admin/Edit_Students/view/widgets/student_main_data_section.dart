@@ -18,11 +18,11 @@ class MainDataSection extends StatelessWidget {
                 labeltext: "Student Name",
               controller: cubit.editNameController,
             ),
-            SizedBox(width: 10,),
+            const SizedBox(width: 10,),
             MyTextField(labeltext: "Student ID",controller: cubit.editIDController,),
-            SizedBox(width: 10,),
+            const SizedBox(width: 10,),
             MyTextField(labeltext: "Student Email",controller: cubit.editEmailController,),
-            SizedBox(width: 10,),
+            const SizedBox(width: 10,),
             MyTextField(labeltext: "Password",controller: cubit.editPasswordController,),
           ],
         ),
@@ -139,19 +139,19 @@ class MainDataSection extends StatelessWidget {
                 child: AbsorbPointer(
                   child: TextField(
                     controller: cubit.dobController,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       labelText: 'Date of Birth',
-                      border: const OutlineInputBorder(
+                      border: OutlineInputBorder(
                         borderSide: BorderSide(
                             color: ColorsAsset.kPrimary
                         ),
                       ),
-                      enabledBorder: const OutlineInputBorder(
+                      enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
                             color: ColorsAsset.kPrimary
                         ),
                       ),
-                      focusedBorder: const OutlineInputBorder(
+                      focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(
                             color: ColorsAsset.kPrimary
                         ),

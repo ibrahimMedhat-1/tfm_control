@@ -1,9 +1,9 @@
 
 import 'package:flutter/material.dart';
-import 'package:tfm_control/3.admin/layout/view/widgets/dashboard.dart';
 import 'package:tfm_control/3.admin/Students/view/students_view.dart';
 
 import '../../majors/view/majors_view.dart';
+import '../../subjects/view/subjects_view.dart';
 
 class RowListModel {
   final String title;
@@ -19,7 +19,7 @@ class RowListModel {
   });
   static List<RowListModel> rowList = [
     RowListModel(
-      widgetBuilder: () =>   StudentsView(),
+      widgetBuilder: () =>   const StudentsView(),
       icon: Icons.person,
         title: "Students",
         onTap: (context){}
@@ -27,7 +27,7 @@ class RowListModel {
 
 
     RowListModel(
-        widgetBuilder: () => const Dashboard(),
+        widgetBuilder: () =>   SubjectsView(),
         icon: Icons.menu_book,
         title: "Subjects",
       onTap: (context){}
@@ -40,19 +40,19 @@ class RowListModel {
       onTap: (context) {},
     ),
     RowListModel(
-      widgetBuilder: () =>   StudentsView(),
+      widgetBuilder: () =>   const StudentsView(),
       icon: Icons.analytics,
       title: "Dashboard",
       onTap: (context) {},
     ),
     RowListModel(
-      widgetBuilder: () =>   StudentsView(),
+      widgetBuilder: () =>   const StudentsView(),
       icon: Icons.my_library_books_outlined,
       title: "Exams",
       onTap: (context) {},
     ),
     RowListModel(
-      widgetBuilder: () =>   StudentsView(),
+      widgetBuilder: () =>   const StudentsView(),
       icon: Icons.settings,
       title: "Settings",
       onTap: (context) {},

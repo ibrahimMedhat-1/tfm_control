@@ -4,7 +4,7 @@ import 'package:tfm_control/3.admin/Students/view/widgets/custom_textfield.dart'
 import '../../../../utils/styles/colors.dart';
 
 class FloatingButton extends StatefulWidget {
-   FloatingButton({
+   const FloatingButton({
     super.key,
   });
 

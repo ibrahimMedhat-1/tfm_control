@@ -125,19 +125,19 @@ class PersonalDataRow extends StatelessWidget {
                 child: AbsorbPointer(
                   child: TextField(
                     controller: cubit.dobController,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       labelText: 'Date of Birth',
-                      border: const OutlineInputBorder(
+                      border: OutlineInputBorder(
                         borderSide: BorderSide(
                             color: ColorsAsset.kPrimary
                         ),
                       ),
-                      enabledBorder: const OutlineInputBorder(
+                      enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
                             color: ColorsAsset.kPrimary
                         ),
                       ),
-                      focusedBorder: const OutlineInputBorder(
+                      focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(
                             color: ColorsAsset.kPrimary
                         ),

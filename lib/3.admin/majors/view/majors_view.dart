@@ -16,25 +16,32 @@ class MajorsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('University Majors'),
+        backgroundColor: ColorsAsset.kPrimary,
+        title: const Text('University Majors',style: TextStyle(
+          color: Colors.white,
+
+        ),),
         centerTitle: true,
       ),
-      body:  ListView.builder(
-        itemCount: majors.length,
-        itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.all(5.0),
-            child: ListTile(
-              tileColor:  ColorsAsset.klightblue,
-              leading: Icon(Icons.school,color: ColorsAsset.kMedium,),
-              title: Text(majors[index]),
-              onTap: () {},
-              trailing: Icon(Icons.arrow_forward_ios_outlined,color: ColorsAsset.kPrimary,),
-            ),
-          );
-        },
+      body:  Padding(
+        padding: const EdgeInsets.only(top: 20),
+        child: ListView.builder(
+          itemCount: majors.length,
+          itemBuilder: (context, index) {
+            return Padding(
+              padding: const EdgeInsets.all(5.0),
+              child: ListTile(
+                tileColor:  ColorsAsset.klightblue,
+                leading: const Icon(Icons.school,color: ColorsAsset.kMedium,),
+                title: Text(majors[index]),
+                onTap: () {},
+                trailing: const Icon(Icons.arrow_forward_ios_outlined,color: ColorsAsset.kPrimary,),
+              ),
+            );
+          },
+        ),
       ),
-      floatingActionButton: FloatingButton(),
+      floatingActionButton: const FloatingButton(),
     );
   }
 }

@@ -25,7 +25,10 @@ class _AdminLayoutState extends State<AdminLayout> {
             flex: 2,
             child:  Column(
               children: [
-                Image.asset('assets/images/logo.png'),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Image.asset('assets/images/logo.png',height: MediaQuery.of(context).size.height*0.18,),
+                ),
                 const Divider(),
                 Expanded(
                   child: ListView.builder(

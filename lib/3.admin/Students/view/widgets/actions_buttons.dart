@@ -9,7 +9,7 @@ Widget actionButtons(BuildContext context, int index) {
       IconButton(
         icon: const Icon(Icons.edit, color: ColorsAsset.kPrimary),
         onPressed: () {
-         Navigator.of(context).push(MaterialPageRoute(builder: (context) => EditStudentView(),));
+         Navigator.of(context).push(MaterialPageRoute(builder: (context) => const EditStudentView(),));
         },
       ),
       IconButton(
