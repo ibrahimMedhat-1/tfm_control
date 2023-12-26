@@ -12,23 +12,19 @@ class PreviousCertificateRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Row(
-          children: [
-            MyTextField(
-              labeltext: 'School',
-              controller: cubit.schoolController,
-            ),
-            const SizedBox(width: 10,),
-            MyTextField(
-              labeltext: 'certificate name',
-              controller: cubit.certificateNameController,
-            ),
-            const SizedBox(width: 10,),
-            MyTextField(
-              labeltext: 'Graduation year',
-              controller: cubit.graduationYearController,
-            ),
-          ],
+        MyTextField(
+          labeltext: 'School',
+          controller: cubit.schoolController,
+        ),
+        const SizedBox(width: 10,),
+        MyTextField(
+          labeltext: 'certificate name',
+          controller: cubit.certificateNameController,
+        ),
+        const SizedBox(width: 10,),
+        MyTextField(
+          labeltext: 'Graduation year',
+          controller: cubit.graduationYearController,
         ),
       ],
     );

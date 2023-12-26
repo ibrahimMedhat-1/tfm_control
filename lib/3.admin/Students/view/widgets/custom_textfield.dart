@@ -10,8 +10,7 @@ class MyTextField extends StatelessWidget {
   Widget? suffixIcon;
   @override
   Widget build(BuildContext context) {
-    return  Expanded(
-      flex: 1,
+    return  Flexible(
       child: TextField(
         controller: controller,
         decoration: InputDecoration(

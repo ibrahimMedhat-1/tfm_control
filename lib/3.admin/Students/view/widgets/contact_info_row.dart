@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../../manager/students_cubit.dart';
 import 'custom_textfield.dart';
-
 class ContactInfoRow extends StatelessWidget {
   final StudentsCubit cubit;
 
@@ -12,28 +11,32 @@ class ContactInfoRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Row(
-          children: [
-            MyTextField(
-              labeltext: 'city',
-              controller: cubit.studentCityController,
-            ),
-            const SizedBox(width: 10,),
-            MyTextField(
-              labeltext: 'email',
-              controller: cubit.studentEmailController,
-            ),
-            const SizedBox(width: 10,),
-            MyTextField(
-              labeltext: 'phone No.',
-              controller: cubit.studentPhoneController,
-            ),
-            const SizedBox(width: 10,),
-            MyTextField(
-              labeltext: 'address',
-              controller: cubit.studentAddressController,
-            ),
-          ],
+        Expanded(
+          child: MyTextField(
+            labeltext: 'city',
+            controller: cubit.studentCityController,
+          ),
+        ),
+        const SizedBox(width: 10),
+        Expanded(
+          child: MyTextField(
+            labeltext: 'email',
+            controller: cubit.studentEmailController,
+          ),
+        ),
+        const SizedBox(width: 10),
+        Expanded(
+          child: MyTextField(
+            labeltext: 'phone No.',
+            controller: cubit.studentPhoneController,
+          ),
+        ),
+        const SizedBox(width: 10),
+        Expanded(
+          child: MyTextField(
+            labeltext: 'address',
+            controller: cubit.studentAddressController,
+          ),
         ),
       ],
     );

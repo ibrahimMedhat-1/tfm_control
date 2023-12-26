@@ -17,41 +17,45 @@ class AddStudentPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<StudentsCubit, StudentsState>(
-      listener: (context, state) {},
-      builder: (context, state) {
-        StudentsCubit cubit = StudentsCubit.get(context);
-        return Scaffold(
-          appBar: AppBar(
-            iconTheme: const IconThemeData(color: Colors.white),
-            backgroundColor: ColorsAsset.kPrimary,
-            title: const Text(
-              'Add Student',
-              style: TextStyle(color: Colors.white),
+    return BlocProvider(
+      create: (context) => StudentsCubit(),
+      child: BlocConsumer<StudentsCubit, StudentsState>(
+        listener: (context, state) {},
+        builder: (context, state) {
+          StudentsCubit cubit = StudentsCubit.get(context);
+          return Scaffold(
+            appBar: AppBar(
+              iconTheme: const IconThemeData(color: Colors.white),
+              backgroundColor: ColorsAsset.kPrimary,
+              title: const Text(
+                'Add Student',
+                style: TextStyle(color: Colors.white),
+              ),
             ),
-          ),
-          body: SingleChildScrollView(
-            padding: const EdgeInsets.all(16),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                const SectionTitle(title: "Student :-"),
-                StudentRow(cubit: cubit),
-                const SectionTitle(title: "Personal Data :-"),
-                PersonalDataRow(cubit: cubit),
-                const SectionTitle(title: "Family Data :-"),
-                FamilyDataRow(cubit: cubit),
-                const SectionTitle(title: "Contact Info :-"),
-                ContactInfoRow(cubit: cubit),
-                const SectionTitle(title: "Previous Certificate:-"),
-                PreviousCertificateRow(cubit: cubit),
-                const SizedBox(height: 20),
-                const SubmitButton(),
-              ],
+            body: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ListView(
+                children: <Widget>[
+                  const SectionTitle(title: "Student :-"),
+                  StudentRow(cubit: cubit),
+                  const SectionTitle(title: "Personal Data :-"),
+                  PersonalDataRow(cubit: cubit),
+                  const SectionTitle(title: "Family Data :-"),
+                  FamilyDataRow(cubit: cubit),
+                  const SectionTitle(title: "Contact Info :-"),
+                  ContactInfoRow(cubit: cubit),
+                  const SectionTitle(title: "Previous Certificate:-"),
+                  PreviousCertificateRow(cubit: cubit),
+                  const SizedBox(height: 20),
+                  const SubmitButton(),
+                ],
+
+
+              ),
             ),
-          ),
-        );
-      },
+          );
+        },
+      ),
     );
   }
 }
