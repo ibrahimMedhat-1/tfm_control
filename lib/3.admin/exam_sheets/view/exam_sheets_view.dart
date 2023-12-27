@@ -15,7 +15,13 @@ class ExamSheetsPage extends StatelessWidget {
       child: const Padding(
         padding: EdgeInsets.all(10),
         child: Column(
-          children: [MajorsDropDown(), SizedBox(height: 30), TermSelection(), SizedBox(height: 30), ExamSheetsTable()],
+          children: [
+            MajorsDropDown(),
+            SizedBox(height: 30),
+            TermSelection(),
+            SizedBox(height: 30),
+            ExamSheetsTable()
+          ],
         ),
       ),
     );
