@@ -42,7 +42,7 @@ class RowListModel {
       onTap: (context) {},
     ),
     RowListModel(
-      widgetBuilder: () => const StudentsView(),
+      widgetBuilder: () => const SizedBox(),
       icon: Icons.analytics,
       title: "Dashboard",
       onTap: (context) {},
@@ -60,7 +60,7 @@ class RowListModel {
       onTap: (context) {},
     ),
     RowListModel(
-      widgetBuilder: () => const StudentsView(),
+      widgetBuilder: () => const SizedBox(),
       icon: Icons.settings,
       title: "Settings",
       onTap: (context) {},
