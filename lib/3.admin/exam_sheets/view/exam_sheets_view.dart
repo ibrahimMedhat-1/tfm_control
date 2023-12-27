@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tfm_control/3.admin/exam_sheets/manager/exam_sheets_cubit.dart';
+import 'package:tfm_control/3.admin/exam_sheets/view/widgets/exam_sheets_table.dart';
 import 'package:tfm_control/3.admin/exam_sheets/view/widgets/major_drop_down.dart';
 import 'package:tfm_control/3.admin/exam_sheets/view/widgets/term_selection_widget.dart';
 
@@ -14,11 +15,7 @@ class ExamSheetsPage extends StatelessWidget {
       child: const Padding(
         padding: EdgeInsets.all(10),
         child: Column(
-          children: [
-            MajorsDropDown(),
-            SizedBox(height: 30),
-            TermSelection(),
-          ],
+          children: [MajorsDropDown(), SizedBox(height: 30), TermSelection(), SizedBox(height: 30), ExamSheetsTable()],
         ),
       ),
     );
