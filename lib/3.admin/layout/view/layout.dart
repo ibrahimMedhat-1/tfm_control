@@ -8,26 +8,27 @@ class AdminLayout extends StatefulWidget {
   const AdminLayout({Key? key}) : super(key: key);
 
   @override
-  _AdminLayoutState createState() => _AdminLayoutState();
+  AdminLayoutState createState() => AdminLayoutState();
 }
 
-class _AdminLayoutState extends State<AdminLayout> {
-
-  Widget selectedWidget =  const StudentsView();
+class AdminLayoutState extends State<AdminLayout> {
+  Widget selectedWidget = const StudentsView();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Row(
         children: [
-
           Expanded(
             flex: 2,
-            child:  Column(
+            child: Column(
               children: [
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Image.asset('assets/images/logo.png',height: MediaQuery.of(context).size.height*0.18,),
+                  child: Image.asset(
+                    'assets/images/logo.png',
+                    height: MediaQuery.of(context).size.height * 0.18,
+                  ),
                 ),
                 const Divider(),
                 Expanded(
@@ -36,18 +37,20 @@ class _AdminLayoutState extends State<AdminLayout> {
                     itemBuilder: (context, index) {
                       var item = RowListModel.rowList[index];
                       return ListTile(
+                        selected: item.isSelected,
+                        selectedColor: Colors.white,
+                        selectedTileColor: ColorsAsset.kPrimary,
+                        // autofocus: true,
                         leading: Icon(
                           item.icon,
                           color: ColorsAsset.kLight,
                         ),
                         title: Text(
                           item.title,
-                          style: const TextStyle(
-                            color: ColorsAsset.kPrimary,
-                          ),
+                          style: const TextStyle(),
                         ),
-                        onTap: (){
-                          updateSelectedWidget(RowListModel.rowList[index].widgetBuilder());
+                        onTap: () {
+                          updateSelectedWidget(index);
                         },
                       );
                     },
@@ -66,11 +69,13 @@ class _AdminLayoutState extends State<AdminLayout> {
     );
   }
 
-  void updateSelectedWidget(Widget newWidget) {
+  void updateSelectedWidget(int index) {
     setState(() {
-      selectedWidget = newWidget;
+      for (var element in RowListModel.rowList) {
+        element.isSelected = false;
+      }
+      RowListModel.rowList[index].isSelected = true;
+      selectedWidget = RowListModel.rowList[index].widgetBuilder();
     });
   }
 }
-
-
