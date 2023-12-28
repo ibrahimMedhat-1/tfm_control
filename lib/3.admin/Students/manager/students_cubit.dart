@@ -66,20 +66,20 @@ class StudentsCubit extends Cubit<StudentsState> {
   }
 
   final List<Map<String, dynamic>> data = [
-    {"id": 1, "name": "Ibrahim Medhat"},
-    {"id": 2, "name": "Toqa hisham"},
-    {"id": 1, "name": "Ibrahim Medhat"},
-    {"id": 2, "name": "Toqa hisham"},
-    {"id": 1, "name": "Ibrahim Medhat"},
-    {"id": 2, "name": "Toqa hisham"},
-    {"id": 1, "name": "Ibrahim Medhat"},
-    {"id": 2, "name": "Toqa hisham"},
-    {"id": 1, "name": "Ibrahim Medhat"},
-    {"id": 2, "name": "Toqa hisham"},
-    {"id": 1, "name": "Ibrahim Medhat"},
-    {"id": 2, "name": "Toqa hisham"},
-    {"id": 1, "name": "Ibrahim Medhat"},
-    {"id": 2, "name": "Toqa hisham"},
+    {"id": 1, "name": "Student Name"},
+    {"id": 2, "name": "Student Name"},
+    {"id": 1, "name": "Student Name"},
+    {"id": 2, "name": "Student Name"},
+    {"id": 1, "name": "Student Name"},
+    {"id": 2, "name": "Student Name"},
+    {"id": 1, "name": "Student Name"},
+    {"id": 2, "name": "Student Name"},
+    {"id": 1, "name": "Student Name"},
+    {"id": 2, "name": "Student Name"},
+    {"id": 1, "name": "Student Name"},
+    {"id": 2, "name": "Student Name"},
+    {"id": 1, "name": "Student Name"},
+    {"id": 2, "name": "Student Name"},
     // Add more data here
   ];
 }

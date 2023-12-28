@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '1.student/layout/view/layout.dart';
+import '3.admin/layout/view/layout.dart';
 
 void main() {
   runApp(const MyApp());

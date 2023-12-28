@@ -21,7 +21,7 @@ class StudentRowList {
   static List<StudentRowList> rowList = [
     StudentRowList(
       isSelected: true,
-      widgetBuilder: () =>  BasicDataView(),
+      widgetBuilder: () =>  const BasicDataView(),
       icon: Icons.person,
       title: "Basic Data",
       onTap: (context) {},

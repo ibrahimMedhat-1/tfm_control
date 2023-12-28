@@ -12,7 +12,7 @@ class StudentLayout extends StatefulWidget {
 }
 
 class _StudentLayoutState extends State<StudentLayout> {
-  Widget selectedWidget =  BasicDataView();
+  Widget selectedWidget =  const BasicDataView();
   @override
   Widget build(BuildContext context) {
     return Scaffold(

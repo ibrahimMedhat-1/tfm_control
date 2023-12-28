@@ -1,4 +1,3 @@
-import 'package:bloc/bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
 
@@ -9,7 +8,7 @@ class BasicDataCubit extends Cubit<BasicDataState> {
   static BasicDataCubit get(context) => BlocProvider.of(context);
   final List<Map<String, dynamic>>familyData  = [
     {
-      "Name": "Hisham Ibrahim",
+      "Name": "Parent Name",
       "Job": "123",
       "city": "cairo,Egypt",
       "Address": "maadi",
@@ -27,7 +26,7 @@ class BasicDataCubit extends Cubit<BasicDataState> {
   ];
   final List<Map<String, dynamic>> PersonalData = [
     {
-      "Name": "Toqa hisham",
+      "Name": "Student Name",
       "ID": "123",
       "National ID": "NID12345",
       "Address": "maadi",
