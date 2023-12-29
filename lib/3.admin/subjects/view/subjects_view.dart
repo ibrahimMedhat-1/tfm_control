@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:tfm_control/3.admin/subjects/view/widgets/floating_button.dart';
 import 'package:tfm_control/utils/styles/colors.dart';
 
+import '../../subject_details/view/subject_details_view.dart';
+
 class SubjectsView extends StatelessWidget {
   final List<String> subjects = [
     "Maths",
@@ -46,30 +48,35 @@ class SubjectsView extends StatelessWidget {
         ),
         itemCount: subjects.length,
         itemBuilder: (context, index) {
-          return Container(
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
-              color: ColorsAsset.klightblue,
-              borderRadius: BorderRadius.circular(15),
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  subjects[index],
-                  style: const TextStyle(
-                    color: ColorsAsset.kPrimary,
-                    fontSize: 20,
+          return GestureDetector(
+            onTap: (){
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) =>const SubjectDetailsView()));
+            },
+            child: Container(
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                color: ColorsAsset.klightblue,
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    subjects[index],
+                    style: const TextStyle(
+                      color: ColorsAsset.kPrimary,
+                      fontSize: 20,
+                    ),
                   ),
-                ),
-                const SizedBox(
-                  height: 5,
-                ),
-                Text(
-                  "tap to see details",
-                  style: TextStyle(fontSize: MediaQuery.of(context).size.width*0.009),
-                )
-              ],
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  Text(
+                    "tap to see details",
+                    style: TextStyle(fontSize: MediaQuery.of(context).size.width*0.009),
+                  )
+                ],
+              ),
             ),
           );
         },
