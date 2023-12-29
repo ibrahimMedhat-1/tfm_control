@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:tfm_control/1.student/Study_Table/view/subject_content.dart';
+import 'package:tfm_control/2.professor/material/view/upload_material_view.dart';
 
 import '../../../utils/styles/colors.dart';
 
-class SubjectDetails extends StatelessWidget {
-  const SubjectDetails({super.key});
+class MaterialView extends StatelessWidget {
+  const MaterialView({super.key});
 
 
   @override
   Widget build(BuildContext context) {
     final List<String> subjects = [
       "English",
+      "Network",
+      "MAth",
       "Science",
       "History",
       "Geography",
@@ -19,9 +21,8 @@ class SubjectDetails extends StatelessWidget {
     int gridCount = MediaQuery.of(context).size.width > 600 ? 6 : 4;
     return Scaffold(
       appBar: AppBar(
-        iconTheme: const IconThemeData(color: Colors.white),
         title: const Text(
-          'Semester Subjects',
+          'My Subjects',
           style: TextStyle(color: Colors.white),
         ),
         backgroundColor: ColorsAsset.kPrimary,
@@ -37,7 +38,7 @@ class SubjectDetails extends StatelessWidget {
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: (){
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) =>const SubjectContentView()));
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) =>const UploadMaterialView()));
             },
             child: Container(
               alignment: Alignment.center,
@@ -55,13 +56,7 @@ class SubjectDetails extends StatelessWidget {
                       fontSize: 20,
                     ),
                   ),
-                  const SizedBox(
-                    height: 5,
-                  ),
-                  Text(
-                    "tap to see details",
-                    style: TextStyle(fontSize: MediaQuery.of(context).size.width*0.009),
-                  )
+
                 ],
               ),
             ),
