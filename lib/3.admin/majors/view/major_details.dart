@@ -44,7 +44,7 @@ class MajorDetails extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 10),
-            ListTile(
+            const ListTile(
               tileColor: ColorsAsset.klightblue,
               title: Text("First Semester",style: TextStyle(color: ColorsAsset.kPrimary,fontWeight: FontWeight.bold),),
             ),
@@ -53,7 +53,7 @@ class MajorDetails extends StatelessWidget {
                 itemCount: subjects.length,
                 itemBuilder: (context, index) {
                   return ListTile(
-                    trailing: Icon(Icons.arrow_forward_ios_outlined,color: ColorsAsset.kPrimary,),
+                    trailing: const Icon(Icons.arrow_forward_ios_outlined,color: ColorsAsset.kPrimary,),
                     title: Text(subjects[index]),
                     onTap: () {
                       // Navigator.of(context).push(MaterialPageRoute(
@@ -64,7 +64,7 @@ class MajorDetails extends StatelessWidget {
                 },
               ),
             ),
-            ListTile(
+            const ListTile(
               tileColor: ColorsAsset.klightblue,
               title: Text("Second Semester",style: TextStyle(color: ColorsAsset.kPrimary,fontWeight: FontWeight.bold),),
             ),
@@ -73,7 +73,7 @@ class MajorDetails extends StatelessWidget {
                 itemCount: subjects.length,
                 itemBuilder: (context, index) {
                   return ListTile(
-                    trailing: Icon(Icons.arrow_forward_ios_outlined,color: ColorsAsset.kPrimary,),
+                    trailing: const Icon(Icons.arrow_forward_ios_outlined,color: ColorsAsset.kPrimary,),
                     title: Text(subjects[index]),
                     onTap: () {
                       // Navigator.of(context).push(MaterialPageRoute(

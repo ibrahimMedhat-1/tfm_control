@@ -37,7 +37,7 @@ class MajorsView extends StatelessWidget {
                 leading: const Icon(Icons.school,color: ColorsAsset.kMedium,),
                 title: Text(majors[index]),
                 onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => MajorDetails(),));
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => const MajorDetails(),));
 
                 },
                 trailing: const Icon(Icons.arrow_forward_ios_outlined,color: ColorsAsset.kPrimary,),

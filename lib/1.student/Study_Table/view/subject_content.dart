@@ -17,9 +17,9 @@ class SubjectContentView extends StatelessWidget {
       ),
       body: Column(
         children: [
-          const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Text("Subject Materials", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+          const ListTile(
+            tileColor: ColorsAsset.klightblue,
+            title:Text("Subject Materials", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)) ,
           ),
           Expanded(
             child: Container(
@@ -28,10 +28,11 @@ class SubjectContentView extends StatelessWidget {
             ),
           ),
           const Divider(),
-          const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Text("Subject Videos", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+          const ListTile(
+            tileColor: ColorsAsset.klightblue,
+            title:Text("Subject Videos", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)) ,
           ),
+
           Expanded(
             child: Container(
               padding: const EdgeInsets.symmetric(vertical: 8),
@@ -50,7 +51,6 @@ class SubjectContentView extends StatelessWidget {
         return Padding(
           padding: const EdgeInsets.all(8.0),
           child: ListTile(
-            tileColor: ColorsAsset.klightblue,
             title: Text("Network chapter ${index + 1}"),
             leading: Image.asset("assets/images/icons8-pdf-80 (1).png"),
             trailing: const Icon(Icons.download,color: ColorsAsset.kPrimary,),
@@ -67,7 +67,6 @@ class SubjectContentView extends StatelessWidget {
         return Padding(
           padding: const EdgeInsets.all(8.0),
           child: ListTile(
-            tileColor: ColorsAsset.klightblue,
             title: Text("Video ${index + 1}"),
             leading: const Icon(Icons.play_circle_outline),
             trailing: const Icon(Icons.download,color: ColorsAsset.kPrimary,),
