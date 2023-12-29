@@ -8,7 +8,7 @@ class SubjectContentView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        iconTheme: IconThemeData(color: Colors.white),
+        iconTheme: const IconThemeData(color: Colors.white),
         title: const Text(
           'Subject Content',
           style: TextStyle(color: Colors.white),

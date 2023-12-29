@@ -50,7 +50,7 @@ class StudyTableView extends StatelessWidget {
               ),
               child: const Text('Subjects Details',style: TextStyle(color: Colors.white),),
               onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(builder: (context) => SubjectDetails(),));
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => const SubjectDetails(),));
               },
             ),
           ),
