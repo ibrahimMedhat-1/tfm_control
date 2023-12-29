@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import '../../doctor_schedule/view/doctor_schedule_view.dart';
 import '../../exam_table/view/exma_table_view.dart';
 import '../../material/view/material_view.dart';
-import '../../material/view/upload_material_view.dart';
 import '../../student_grades/view/student_grades_view.dart';
 
 class DoctorRowList {

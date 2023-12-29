@@ -45,7 +45,7 @@ class _StudentGradesViewState extends State<StudentGradesView> {
         children: subjects.keys.map((String subject) {
           return Column(
             children: <Widget>[
-              SizedBox(height: 25,),
+              const SizedBox(height: 25,),
               ListTile(
                 tileColor: ColorsAsset.klightblue,
                 title: Text(subject),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:tfm_control/3.admin/layout/view/layout.dart';
 import 'package:tfm_control/utils/styles/colors.dart';
 
-import '2.professor/layout/view/layout.dart';
 
 
 void main() {
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const ProfessorLayout(),
+      home: const AdminLayout(),
     );
   }
 }

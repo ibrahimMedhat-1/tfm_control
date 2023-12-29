@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:tfm_control/3.admin/majors/view/widgets/floating_action_button.dart';
 import 'package:tfm_control/utils/styles/colors.dart';
 
+import 'major_details.dart';
+
 class MajorsView extends StatelessWidget {
    MajorsView({super.key});
   final List<String> majors = [
@@ -34,7 +36,10 @@ class MajorsView extends StatelessWidget {
                 tileColor:  ColorsAsset.klightblue,
                 leading: const Icon(Icons.school,color: ColorsAsset.kMedium,),
                 title: Text(majors[index]),
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => MajorDetails(),));
+
+                },
                 trailing: const Icon(Icons.arrow_forward_ios_outlined,color: ColorsAsset.kPrimary,),
               ),
             );
