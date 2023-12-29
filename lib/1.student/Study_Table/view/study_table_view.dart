@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tfm_control/utils/styles/colors.dart';
 
+import 'subjects_details.dart';
+
 class StudyTableView extends StatelessWidget {
   final Map<String, List<SubjectModel>> weekSchedule = {
     "Saturday": [
@@ -36,6 +38,23 @@ class StudyTableView extends StatelessWidget {
     return  Scaffold(
       appBar: AppBar(
         title: const Text('Weekly Study Schedule'),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: ColorsAsset.kPrimary,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8.0), // Border radius
+                ),
+              ),
+              child: const Text('Subjects Details',style: TextStyle(color: Colors.white),),
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => SubjectDetails(),));
+              },
+            ),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
