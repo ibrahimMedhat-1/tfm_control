@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../3.admin/Students/view/widgets/custom_textfield.dart';
 import '../../../../utils/styles/colors.dart';
 
-void showGradeDialog(String subject, String student,BuildContext context) {
+void showGradeDialog(String subject, String student, BuildContext context) {
   showDialog(
     context: context,
     builder: (BuildContext context) {
