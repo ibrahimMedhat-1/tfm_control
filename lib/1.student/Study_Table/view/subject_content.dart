@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:tfm_control/1.student/Study_Table/view/widgets/material_list.dart';
 import 'package:tfm_control/utils/styles/colors.dart';
+
+import 'widgets/video_list.dart';
 
 class SubjectContentView extends StatelessWidget {
   const SubjectContentView({super.key});
@@ -44,35 +47,7 @@ class SubjectContentView extends StatelessWidget {
     );
   }
 
-  Widget materialList(BuildContext context) {
-    return ListView.builder(
-      itemCount: 5,
-      itemBuilder: (context, index) {
-        return Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: ListTile(
-            title: Text("Network chapter ${index + 1}"),
-            leading: Image.asset("assets/images/icons8-pdf-80 (1).png"),
-            trailing: const Icon(Icons.download,color: ColorsAsset.kPrimary,),
-          ),
-        );
-      },
-    );
-  }
 
-  Widget videoList(BuildContext context) {
-    return ListView.builder(
-      itemCount: 5,
-      itemBuilder: (context, index) {
-        return Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: ListTile(
-            title: Text("Video ${index + 1}"),
-            leading: const Icon(Icons.play_circle_outline),
-            trailing: const Icon(Icons.download,color: ColorsAsset.kPrimary,),
-          ),
-        );
-      },
-    );
-  }
+
+
 }

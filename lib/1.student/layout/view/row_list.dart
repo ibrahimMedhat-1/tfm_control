@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:tfm_control/1.student/Study_Table/view/study_table_view.dart';
 
 import '../../basic_data/view/basic_data_view.dart';
-import '../../exam_table/exam_table_view.dart';
+import '../../exam_table/view/exam_table_view.dart';
 import '../../payment/view/payment_view.dart';
 import '../../student_grades/view/grades_view.dart';
 import '../../student_progress/view/student_progress_view.dart';

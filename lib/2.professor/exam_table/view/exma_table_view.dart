@@ -1,94 +1,41 @@
-
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:tfm_control/2.professor/exam_table/manager/doctor_exam_table_cubit.dart';
+import 'package:tfm_control/2.professor/exam_table/view/widgets/exam_table.dart';
 
 import '../../../utils/styles/colors.dart';
 
 class ExamTableDoctorView extends StatelessWidget {
-  ExamTableDoctorView({super.key});
-  final List<ExamModel> data = [
-    ExamModel(
-      day: 'Monday',
-      subjectName: 'Mathematics',
-      place: 'Room 101',
-      time: '9:00 AM - 11:00 AM',
-
-    ),
-    ExamModel(
-      day: 'tuesday',
-      subjectName: 'Network',
-      place: 'Room 101',
-      time: '9:00 AM - 11:00 AM',
-
-    ),
-    ExamModel(
-      day: 'sunday',
-      subjectName: 'Physics',
-      place: 'Room 101',
-      time: '9:00 AM - 11:00 AM',
-
-    ),
-
-  ];
+  const ExamTableDoctorView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        iconTheme: const IconThemeData(color: Colors.white),
-        title: const Text(
-          'Exam Table',
-          style: TextStyle(color: Colors.white),
-        ),
-        backgroundColor: ColorsAsset.kPrimary,
-      ),
+    return BlocProvider(
+      create: (context) => DoctorExamTableCubit(),
+      child: BlocBuilder<DoctorExamTableCubit, DoctorExamTableState>(
+        builder: (context, state) {
+          DoctorExamTableCubit cubit = DoctorExamTableCubit.get(context);
 
-      body: Column(
-        children: [
-          const SizedBox(height: 20,),
-          DataTable(
-            border: const TableBorder(
-              top: BorderSide(color: ColorsAsset.kPrimary),
-              bottom: BorderSide(color: ColorsAsset.kPrimary),
-              right: BorderSide(color:  ColorsAsset.kPrimary),
-              left: BorderSide(color:  ColorsAsset.kPrimary),
-              horizontalInside: BorderSide(color:  ColorsAsset.kPrimary),
-              verticalInside: BorderSide(color:  ColorsAsset.kPrimary),
+          return Scaffold(
+            appBar: AppBar(
+              iconTheme: const IconThemeData(color: Colors.white),
+              title: const Text(
+                'Exam Table',
+                style: TextStyle(color: Colors.white),
+              ),
+              backgroundColor: ColorsAsset.kPrimary,
             ),
-            columns: const [
-              DataColumn(label: Text('Day',style: TextStyle(fontWeight: FontWeight.bold,color:  ColorsAsset.kPrimary),)),
-              DataColumn(label: Text('Subject',style: TextStyle(fontWeight: FontWeight.bold,color:  ColorsAsset.kPrimary))),
-              DataColumn(label: Text('Place',style: TextStyle(fontWeight: FontWeight.bold,color:  ColorsAsset.kPrimary))),
-              DataColumn(label: Text('Time',style: TextStyle(fontWeight: FontWeight.bold,color:  ColorsAsset.kPrimary))),
-
-            ],
-            rows: data.map((entry) {
-              return DataRow(cells: [
-                DataCell(Text(entry.day)),
-                DataCell(Text(entry.subjectName)),
-                DataCell(Text(entry.place)),
-                DataCell(Text(entry.time)),
-
-              ]);
-            }).toList(),
-          ),
-        ],
+            body: Column(
+              children: [
+                const SizedBox(
+                  height: 20,
+                ),
+                ExamTable(cubit: cubit,),
+              ],
+            ),
+          );
+        },
       ),
-
     );
   }
-}
-class ExamModel {
-  final String day;
-  final String subjectName;
-  final String place;
-  final String time;
-
-
-  ExamModel({
-    required this.day,
-    required this.subjectName,
-    required this.place,
-    required this.time,
-
-  });
 }

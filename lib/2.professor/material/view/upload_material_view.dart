@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:tfm_control/utils/styles/colors.dart';
 
+import 'widgets/upload_pdf.dart';
+import 'widgets/upload_video.dart';
+
 class UploadMaterialView extends StatelessWidget {
   const UploadMaterialView({super.key});
 
@@ -19,39 +22,9 @@ class UploadMaterialView extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              height: MediaQuery.of(context).size.height*0.3,
-              width: MediaQuery.of(context).size.width*0.3 ,
-              decoration: BoxDecoration(
-                color: ColorsAsset.klightblue,
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.asset("assets/images/icons8-pdf-80 (1).png",height: 100,),
-                  const Text("Upload PDF"),
-                ],
-              ),
-            ),
+            UploadPDF(),
             const SizedBox(width:30 ,),
-            Container(
-              height: MediaQuery.of(context).size.height*0.3,
-              width: MediaQuery.of(context).size.width*0.3,
-              decoration: BoxDecoration(
-                color: ColorsAsset.klightblue,
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.asset("assets/images/icons8-video-96.png"),
-                  const Text("Upload Vedio"),
-                ],
-              ),
-            ),
+            UploadVideo(),
           ],
         ),
       ),

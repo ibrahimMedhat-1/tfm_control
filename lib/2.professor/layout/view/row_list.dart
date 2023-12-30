@@ -29,7 +29,7 @@ class DoctorRowList {
       onTap: (context) {},
     ),
     DoctorRowList(
-      widgetBuilder: () =>   const StudentGradesView(),
+      widgetBuilder: () =>    StudentGradesView(),
       icon: Icons.grade_outlined,
       title: "Students Grades",
       onTap: (context) {},
