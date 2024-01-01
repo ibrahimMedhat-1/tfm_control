@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "579482424180",
+    "project_id": "tfm-control",
+    "storage_bucket": "tfm-control.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:579482424180:android:ee81ef355339d0814e1221",
+        "android_client_info": {
+          "package_name": "com.example.tfm_control"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCahO4pec_sologlMfzJJyrq0e33oCa7xY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
