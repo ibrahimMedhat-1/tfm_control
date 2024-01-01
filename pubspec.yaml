@@ -29,6 +29,8 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   flutter_bloc:
+  firebase_core:
+  firebase_auth:
   flutter:
     sdk: flutter
 
