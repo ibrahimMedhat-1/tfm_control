@@ -63,6 +63,16 @@ class _SubjectDetailsViewState extends State<SubjectDetailsView> {
             ),
             Row(
               children: [
+                Text("Subject Credit hours : ",style: TextStyle(
+                    color: ColorsAsset.kPrimary, fontWeight: FontWeight.bold,fontSize: MediaQuery.of(context).size.width*0.02
+                ),),
+                Text("6 hours",style: TextStyle(
+                    color: ColorsAsset.kPrimary,fontSize: MediaQuery.of(context).size.width*0.02
+                ),),
+              ],
+            ),
+            Row(
+              children: [
                 Text("Exam Time : ",style: TextStyle(
                     color: ColorsAsset.kPrimary, fontWeight: FontWeight.bold,fontSize: MediaQuery.of(context).size.width*0.02
                 ),),

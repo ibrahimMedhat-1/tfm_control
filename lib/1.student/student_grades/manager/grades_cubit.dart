@@ -8,9 +8,9 @@ class GradesCubit extends Cubit<GradesState> {
   GradesCubit() : super(GradesInitial());
   static GradesCubit get(context) => BlocProvider.of(context);
   List<SubjectModel> subjects = [
-    SubjectModel(name: 'Mathematics', code: '5458893', gradeSymbol: "A"),
-    SubjectModel(name: 'English', code: '53454', gradeSymbol: "B+"),
-    SubjectModel(name: 'Physics', code: '53453', gradeSymbol: "C"),
+    SubjectModel(name: 'Mathematics', code: '5458893', creditHours: "6",gradeSymbol: "A"),
+    SubjectModel(name: 'English', code: '53454', creditHours: "6", gradeSymbol: "B+"),
+    SubjectModel(name: 'Physics', code: '53453', creditHours: "6", gradeSymbol: "C"),
   ];
 
   double calculateSemesterGPA() {

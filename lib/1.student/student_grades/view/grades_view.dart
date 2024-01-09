@@ -49,6 +49,10 @@ class TermSubjectsPage extends StatelessWidget {
                   const Row(
                     children: [
                       Text(
+                        'Total Hours : 18',
+                      ),
+                      SizedBox(width: 35.0),
+                      Text(
                         'Semester GPA : 3.7',
                       ),
                        SizedBox(width: 35.0),

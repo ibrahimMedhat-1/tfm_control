@@ -37,6 +37,8 @@ class AddSubjectView extends StatelessWidget {
                     MyTextField(labeltext: "Subject Name"),
                     const SizedBox(width:15,),
                     MyTextField(labeltext: "Subject Code"),
+                      const SizedBox(width:15,),
+                      MyTextField(labeltext: "Subject Credit Hours"),
                   ],
                   ),
                   const SizedBox(height:25,),

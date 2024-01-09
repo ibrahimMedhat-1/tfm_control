@@ -18,8 +18,9 @@ class GradesTable extends StatelessWidget {
         verticalInside: BorderSide(color: ColorsAsset.kPrimary),
       ),
       columns: const [
-        DataColumn(label: Text('Subject')),
-        DataColumn(label: Text('Code')),
+        DataColumn(label: Text('Subject Name')),
+        DataColumn(label: Text('Subject Code')),
+        DataColumn(label: Text('Credit hours')),
         DataColumn(label: Text('Grade')),
       ],
       rows: cubit.subjects
@@ -29,6 +30,7 @@ class GradesTable extends StatelessWidget {
               cells: [
                 DataCell(Text(subject.name)),
                 DataCell(Text(subject.code.toString())),
+                DataCell(Text(subject.creditHours.toString())),
                 DataCell(Text(subject.gradeSymbol!)),
               ],
             ),

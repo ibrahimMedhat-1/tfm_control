@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:tfm_control/1.student/layout/view/layout.dart';
 import 'package:tfm_control/2.professor/layout/view/layout.dart';
+import 'package:tfm_control/3.admin/layout/view/layout.dart';
 import 'package:tfm_control/utils/styles/colors.dart';
 
 import 'firebase_options.dart';
