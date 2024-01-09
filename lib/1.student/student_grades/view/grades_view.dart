@@ -25,7 +25,7 @@ class TermSubjectsPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   const Text(
-                    'Term Subjects and Grades',
+                    'Semester Subjects and Grades',
                     style: TextStyle(
                         fontSize: 24.0,
                         fontWeight: FontWeight.bold,
@@ -34,15 +34,26 @@ class TermSubjectsPage extends StatelessWidget {
                   const SizedBox(height: 16.0),
                   GradesTable(cubit: cubit,),
                   const SizedBox(height: 16.0),
-                  Row(
+                  // Row(
+                  //   children: [
+                  //     Text(
+                  //       'Semester GPA: ${cubit.calculateSemesterGPA().toStringAsFixed(
+                  //           2)}',
+                  //     ),
+                  //     const SizedBox(width: 35.0),
+                  //     Text(
+                  //       'Total GPA: ${cubit.calculateTotalGPA().toStringAsFixed(2)}',
+                  //     ),
+                  //   ],
+                  // ),
+                  const Row(
                     children: [
                       Text(
-                        'Semester GPA: ${cubit.calculateSemesterGPA().toStringAsFixed(
-                            2)}',
+                        'Semester GPA : 3.7',
                       ),
-                      const SizedBox(width: 35.0),
+                       SizedBox(width: 35.0),
                       Text(
-                        'Total GPA: ${cubit.calculateTotalGPA().toStringAsFixed(2)}',
+                        'Total GPA: 3.4',
                       ),
                     ],
                   ),

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tfm_control/2.professor/student_grades/manager/add_student_grades_cubit.dart';
-import 'package:tfm_control/2.professor/student_grades/view/widgets/show_dialog.dart';
 
 import '../../../utils/styles/colors.dart';
+import 'choose semester.dart';
 
 class StudentGradesView extends StatefulWidget {
   const StudentGradesView({super.key});
@@ -26,13 +26,13 @@ class StudentGradesViewState extends State<StudentGradesView> {
             appBar: AppBar(
               iconTheme: const IconThemeData(color: Colors.white),
               title: const Text(
-                'Subjects and Students',
+                'Choose Major',
                 style: TextStyle(color: Colors.white),
               ),
               backgroundColor: ColorsAsset.kPrimary,
             ),
             body: ListView(
-              children: cubit.subjects.keys.map((String subject) {
+              children: cubit.Majors.keys.map((String majors) {
                 return Column(
                   children: <Widget>[
                     const SizedBox(
@@ -40,26 +40,25 @@ class StudentGradesViewState extends State<StudentGradesView> {
                     ),
                     ListTile(
                       tileColor: ColorsAsset.klightblue,
-                      title: Text(subject),
+                      title: Text(majors),
                       onTap: () {
                         setState(() {
-                          cubit.isExpanded[subject] =
-                              !cubit.isExpanded[subject]!;
+                          cubit.isExpanded[majors] =
+                              !cubit.isExpanded[majors]!;
                         });
                       },
                     ),
-                    if (cubit.isExpanded[subject]!)
+                    if (cubit.isExpanded[majors]!)
                       ListView.builder(
                         physics: const NeverScrollableScrollPhysics(),
                         shrinkWrap: true,
-                        itemCount: cubit.subjects[subject]!.length,
+                        itemCount: cubit.Majors[majors]!.length,
                         itemBuilder: (BuildContext context, int index) {
-                          String student = cubit.subjects[subject]![index];
+                          String major = cubit.Majors[majors]![index];
                           return ListTile(
-                            trailing: const Text("Grade = "),
-                            title: Text('${index + 1}. $student'),
+                            title: Text('${index + 1}. $major'),
                             onTap: () =>
-                                showGradeDialog(subject, student, context),
+                                Navigator.of(context).push(MaterialPageRoute(builder: (context) => const ChooseSemester(),)),
                           );
                         },
                       ),

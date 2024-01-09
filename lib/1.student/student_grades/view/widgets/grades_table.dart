@@ -29,7 +29,7 @@ class GradesTable extends StatelessWidget {
               cells: [
                 DataCell(Text(subject.name)),
                 DataCell(Text(subject.code.toString())),
-                DataCell(Text(subject.grade!.toStringAsFixed(1))),
+                DataCell(Text(subject.gradeSymbol!)),
               ],
             ),
       )

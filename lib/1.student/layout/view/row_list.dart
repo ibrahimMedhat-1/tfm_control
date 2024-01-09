@@ -39,19 +39,19 @@ class StudentRowList {
       onTap: (context) {},
     ),
     StudentRowList(
-      widgetBuilder: () =>  StudyTableView(),
+      widgetBuilder: () =>  const StudyTableView(),
       icon: Icons.table_chart_outlined,
       title: "Study Time Table",
       onTap: (context) {},
     ),
     StudentRowList(
-      widgetBuilder: () =>  ExamTableView(),
+      widgetBuilder: () =>  const ExamTableView(),
       icon: Icons.text_snippet_outlined,
       title: "Exams Time Table",
       onTap: (context) {},
     ),
     StudentRowList(
-      widgetBuilder: () =>  StudentProgressView(),
+      widgetBuilder: () =>  const StudentProgressView(),
       icon: Icons.analytics_outlined,
       title: "Student Progress",
       onTap: (context) {},

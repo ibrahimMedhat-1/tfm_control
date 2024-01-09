@@ -9,6 +9,7 @@ class SubjectModel {
   final String? day;
   final String? place;
   final String? major;
+  final String? gradeSymbol;
 
   SubjectModel(
       {required this.name,
@@ -19,5 +20,5 @@ class SubjectModel {
       this.day,
       this.professor,
       this.time,
-      this.place, this.major});
+      this.place, this.major,this.gradeSymbol});
 }

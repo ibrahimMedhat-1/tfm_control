@@ -18,12 +18,12 @@ class UploadMaterialView extends StatelessWidget {
         ),
         backgroundColor: ColorsAsset.kPrimary,
       ),
-      body: Center(
+      body: const Center(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             UploadPDF(),
-            const SizedBox(width:30 ,),
+            SizedBox(width:30 ,),
             UploadVideo(),
           ],
         ),

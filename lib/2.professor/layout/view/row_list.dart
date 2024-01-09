@@ -23,13 +23,13 @@ class DoctorRowList {
   static List<DoctorRowList> rowList = [
     DoctorRowList(
       isSelected: true,
-      widgetBuilder: () =>   DoctorScheduleView(),
+      widgetBuilder: () =>   const DoctorScheduleView(),
       icon: Icons.app_registration,
       title: "My Schedule",
       onTap: (context) {},
     ),
     DoctorRowList(
-      widgetBuilder: () =>    StudentGradesView(),
+      widgetBuilder: () =>    const StudentGradesView(),
       icon: Icons.grade_outlined,
       title: "Students Grades",
       onTap: (context) {},
@@ -41,7 +41,7 @@ class DoctorRowList {
       onTap: (context) {},
     ),
     DoctorRowList(
-      widgetBuilder: () =>   ExamTableDoctorView(),
+      widgetBuilder: () =>   const ExamTableDoctorView(),
       icon: Icons.text_snippet_outlined,
       title: "Exams Time Table",
       onTap: (context) {},

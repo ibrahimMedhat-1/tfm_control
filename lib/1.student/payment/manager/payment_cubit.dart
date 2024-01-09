@@ -21,7 +21,6 @@ class PaymentCubit extends Cubit<PaymentState> {
         isNotEmpty(cvvController.text)) {
 
       showDialog(
-
         context: context,
         builder: (context) => AlertDialog(
 

@@ -5,15 +5,15 @@ part 'add_student_grades_state.dart';
 class AddStudentGradesCubit extends Cubit<AddStudentGradesState> {
   AddStudentGradesCubit() : super(AddStudentGradesInitial());
   static AddStudentGradesCubit get(context) => BlocProvider.of(context);
-  Map<String, List<String>> subjects = {
-    'Math': ['Student1', 'student2', 'student3'],
-    'Science': ['Student1', 'student2', 'student3'],
+  Map<String, List<String>> Majors = {
+    'Computer Science': ['Level 1', 'Level 2','Level 3','Level 4'],
+    'Buissness': ['Level 1', 'Level 2','Level 3','Level 4'],
   };
   String? subject;
 
   Map<String, bool> isExpanded = {};
   void expanded(){
-    subjects.forEach((key, value) {
+    Majors.forEach((key, value) {
       isExpanded[key] = false;
     });
   }

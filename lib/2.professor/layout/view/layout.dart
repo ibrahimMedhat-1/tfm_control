@@ -13,7 +13,7 @@ class ProfessorLayout extends StatefulWidget {
 }
 
 class _ProfessorLayoutState extends State<ProfessorLayout> {
-  Widget selectedWidget =   DoctorScheduleView();
+  Widget selectedWidget =   const DoctorScheduleView();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
